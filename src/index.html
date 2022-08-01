@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Terentev-Suchkov Vitaliy">
+    <meta name="decription" content="My first final study paper">
+    <meta name="theme-color" content="#FFFFFF">
+    <title>W-WAWE</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preload" href="./fonts/MullerRegular.woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/MullerMedium.woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/MullerBold.woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/MullerLightItalic.woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/MullerRegularItalic.woff2" as="font" crossorigin>
+    <link rel="preload" href="./fonts/OpenSans-Regular.woff2" as="font" crossorigin>
+    <link rel="stylesheet" href="./libs/css/simplebar.min.css">
+    <link rel="stylesheet" href="./libs/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./libs/css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=&lt;ваш API-ключ&gt;"></script>
+    <script defer src="./libs/js/choices.min.js"></script>
+    <script defer src="./libs/js/inputmask.min.js"></script>
+    <script defer src="./libs/js/justvalidate.min.js"></script>
+    <script defer src="./libs/js/popper.min.js"></script>
+    <script defer src="./libs/js/simplebar.min.js"></script>
+    <script defer src="./libs/js/swiper.bundle.min.js"></script>
+    <script defer src="./libs/js/tippy.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top"> 
+        <div class="container header__top-container">
+          <div class="header__logo-wrap"><a class="header__logo" href="#" aria-label="Логотип компании">
+              <picture> 
+                <source srcset="./img/logo/logo-big.png" media="(max-width: 1902px)">
+                <source srcset="./img/logo/logo-mid.png" media="(max-width: 1200px)">
+                <source srcset="./img/logo/logo-small.png" media="(max-width: 576px)"><img src="./img/logo/logo-big.png" alt="Логотип компании">
+              </picture></a></div>
+          <div class="header__categories categories"> 
+            <ul class="categories__list">
+              <li class="categories__item"><a class="categories__link" href="#podcasts">Подкасты</a>
+              </li>
+              <li class="categories__item"><a class="categories__link" href="#programs">Передачи</a>
+              </li>
+              <li class="categories__item"><a class="categories__link" href="#guests">Гости</a>
+              </li>
+              <li class="categories__item"><a class="categories__link" href="#playlists">Плейлисты</a>
+              </li>
+              <li class="categories__item"><a class="categories__link" href="#abous">О нас</a>
+              </li>
+            </ul>
+          </div>
+          <button class="header__search-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <form class="header__search-form" action="">
+            <label class="header__search-lbl">
+              <input class="header__search-input" type="search">
+            </label>
+          </form>
+          <button class="btn btn--small-font login-btn">Вход</button>
+        </div>
+      </div>
+      <div class="header__bottom"> 
+        <div class="container header__bottom-container"> 
+          <div class="header__bottom-wrap"> 
+            <nav class="header__nav"> 
+              <ul class="header__nav-list">
+                <li class="header__nav-item"> <a class="header__nav-link" href="#news">Новости</a>
+                </li>
+                <li class="header__nav-item"> <a class="header__nav-link" href="#blogs">Блоги</a>
+                </li>
+                <li class="header__nav-item"> <a class="header__nav-link" href="#topics">Топ</a>
+                </li>
+                <li class="header__nav-item"> <a class="header__nav-link" href="#surveys">Опросы</a>
+                </li>
+                <li class="header__nav-item"> <a class="header__nav-link" href="#raitings">Рейтинги</a>
+                </li>
+                <li class="header__nav-item"> <a class="header__nav-link" href="#advertisement">Реклама</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__broadcasts broadcasts"> 
+              <article class="broadcasts__item">
+                <button class="broadcasts__btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/>
+</svg>
+                </button>
+                <div class="broadcasts__content">
+                  <h2 class="broadcasts__title">Сейчас в эфире</h2><span class="broadcasts__name">Музыка</span>
+                </div>
+              </article>
+              <article class="broadcasts__item">
+                <button class="broadcasts__btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/>
+</svg>
+                </button>
+                <div class="broadcasts__content">
+                  <h2 class="broadcasts__title">Сейчас в эфире</h2><span class="broadcasts__name">Как так?</span>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="header__pegi"><span class="header__pegi-text">12+</span></div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

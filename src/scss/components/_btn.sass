@@ -1,0 +1,133 @@
+.btn
+    font-weight: 500
+    font-family: 'Muller'
+    background-color: transparent
+    border: none
+    outline: none
+    transition: background 0.3s ease-in-out, outline-color 0.3s ease-in-out, color 0.3s ease-in-out
+    cursor: pointer
+
+.btn--small-font
+    font-size: 16px
+
+.btn--large-font
+    font-size: 20px
+
+    // Кнопки подкастов, эфиров и формы
+.primary-btn
+    padding: 25px 54px
+    border-radius: 40px
+
+    &:hover
+        background-color: $primary-light
+
+    &:focus
+        background-color: $primary-light
+        outline: 2px solid $primary-dark
+        outline-offset: -2px
+    &:active
+        background-color: $primary-dark
+
+.primary-btn--dark
+    background-color: $primary
+    color: #fff
+
+.primary-btn--light
+    background-color: transparent
+    color: $primary
+    outline: 2px solid $primary
+    outline-offset: -2px
+
+    &:hover
+        background-color: $primary
+        color: white
+
+    &:focus
+        color: white
+
+    &:active
+        color: white
+
+    // Кнопки маркета
+.promo-btn
+    padding: 25px 13px
+    color: $promo
+    outline: 2px solid $promo
+    outline-offset: -2px
+    border-radius: 100px
+
+    &:hover
+        color: $promo-black
+        background-color: $promo
+        outline: none
+
+    &:focus
+        color: $promo-black
+        background-color: $promo-dark
+        outline: 2px solid $promo
+    &:active
+        outline: none
+
+    // Кнопка login
+.login-btn
+    padding: 10px 33px
+    border-radius: 77px
+    outline: 2px solid $login-black
+    outline-offset: -2px
+
+    &:hover
+        color: white
+        background-color: $login-black
+
+    &:focus
+        background-color: $primary-light
+
+    &:active
+        color: white
+        background-color: $primary-dark
+        outline: none
+
+    // Кнопка гостя
+.guest-btn
+    padding: 12px 20px
+    border-radius: 77px
+    color: $primary-light
+    outline: 2px solid $primary-light
+    outline-offset: -2px
+
+    &:hover
+        color: white
+        background-color: $primary-light
+
+    &:focus
+        color: white
+        background-color: $primary
+        outline: none
+
+    &:active
+        color: white
+        background-color: $primary-dark
+        outline: none
+
+.date-btn
+    padding: 17px 21px
+    color: $grey
+    outline: 2px solid $light-grey
+    outline-offset: -2px
+    border-radius: 77px 
+
+    &:hover
+      color: white
+      background-color: $primary-light
+      outline: none
+
+    &:focus
+      color: white
+      background-color: $primary-light
+      outline: 2px solid $primary
+
+    &:active
+      color: white
+      background-color: $primary
+  
+    
