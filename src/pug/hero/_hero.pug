@@ -1,0 +1,12 @@
+include ../data/_hero-data.pug
+
+section.hero#hero 
+  .container._container 
+    h1.hero__title= heroTitle
+      span.hero__name= heroName 
+    p.hero__descr Привет, на связи
+      span #{heroName}!
+      | Раньше мы были
+      a.hero__link(href="#") изданием,
+      | а теперь пробуем себя в разоворном жанре. Говорим о музыке, политике, истории, науке и культуре. Здесь, помимо прямого эфира — архив передач и многое другое :)
+    button.btn.btn--large-font.primary-btn.primary-btn--dark.hero__btn Слушать эфир

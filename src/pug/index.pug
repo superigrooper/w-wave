@@ -1,4 +1,4 @@
-- var title = "W-WAWE";
+- var title = "W-WAVE";
 
 doctype html
 html(lang="ru")
@@ -9,9 +9,9 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(name="author", content="Terentev-Suchkov Vitaliy")
     meta(name="decription", content="My first final study paper")
-    meta(name="theme-color", content="#FFFFFF")
+    meta(name="theme-color", content="#4F28A5")
     title= title 
-    link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+    link(rel="shortcut icon", href="./favicon.ico", type="image/x-icon")
     link(rel="preload" href="./fonts/MullerRegular.woff2" as="font" crossorigin)
     link(rel="preload" href="./fonts/MullerMedium.woff2" as="font" crossorigin)
     link(rel="preload" href="./fonts/MullerBold.woff2" as="font" crossorigin)
@@ -36,3 +36,6 @@ html(lang="ru")
 
   body
     include header/_header.pug
+    main.main 
+      include hero/_hero.pug
+      include podcasts/_podcasts.pug
