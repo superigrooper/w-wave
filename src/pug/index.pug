@@ -10,7 +10,7 @@ html(lang="ru")
     meta(name="author", content="Terentev-Suchkov Vitaliy")
     meta(name="decription", content="My first final study paper")
     meta(name="theme-color", content="#4F28A5")
-    title= title 
+    title= title
     link(rel="shortcut icon", href="./favicon.ico", type="image/x-icon")
     link(rel="preload" href="./fonts/MullerRegular.woff2" as="font" crossorigin)
     link(rel="preload" href="./fonts/MullerMedium.woff2" as="font" crossorigin)
@@ -19,7 +19,7 @@ html(lang="ru")
     link(rel="preload" href="./fonts/MullerRegularItalic.woff2" as="font" crossorigin)
     link(rel="preload" href="./fonts/OpenSans-Regular.woff2" as="font" crossorigin)
 
-    //- link(rel="stylesheet", href="./libs/css/choices.min.cs")
+    link(rel="stylesheet", href="./libs/css/choices.min.css")
     link(rel="stylesheet", href="./libs/css/simplebar.min.css")
     link(rel="stylesheet", href="./libs/css/swiper-bundle.min.css")
     link(rel="stylesheet", href="./libs/css/normalize.css")
@@ -32,10 +32,11 @@ html(lang="ru")
     script(defer src="./libs/js/simplebar.min.js")
     script(defer src="./libs/js/swiper.bundle.min.js")
     script(defer src="./libs/js/tippy.min.js")
-    //- script(defer src="./js/main.min.js")
+    script(defer src="./js/main.js" type="module")
 
   body
     include header/_header.pug
-    main.main 
+    main.main
       include hero/_hero.pug
       include podcasts/_podcasts.pug
+      include programs/_programs.pug

@@ -39,9 +39,9 @@ const styles = () => {
     .pipe(gulpif(isDev, sourcemaps.init()))
     .pipe(sass())
     .pipe(concat('style.css'))
-    .pipe(autoprefixer({ 
+    .pipe(autoprefixer({
         overrideBrowserslist: ['last 10 versions'],
-        grid: true 
+        grid: true
       }
     ))
     .pipe(gulpif(isProd, cleanCSS({ level: 2 })))

@@ -1,0 +1,33 @@
+include ../data/_programs-data.pug
+
+section.programs#programs
+  .container._container
+    section.programs__info
+      h2.section-title.programs__title Передачи
+      h3.programs__subtitle Автор:
+      .programs__choice
+        select.programs__select(name="programs")
+
+          each value, target in options
+
+            option.programs__option(value= target, )= value
+
+      .programs__archive
+        a.programs__link(href="archive.html") В архив
+        p.programs__descr В архив попадают все передачи, которые вы пропустили!
+          span Enjoy :)
+    section.programs__content
+
+      - for (var i = 0; i < paths.length; i++)
+
+        .programs__block(data-target= paths[i])
+          ul.programs__list
+
+            each item in programsOne[i]
+
+                li.programs__item
+                  article.card-programs
+                    img.card-programs__img(src= item.img)
+                    h3.card-programs__title= item.title
+                    span.card-programs__time= item.time
+                    a.card-programs__link(href="#") Подробнее
