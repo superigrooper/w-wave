@@ -1,0 +1,130 @@
+.programs {
+
+  &__container {
+    display: flex;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    width: 25%;
+  }
+
+  &__archive {
+    margin-top: auto;
+  }
+
+  &__content {
+    width: 75%;
+  }
+
+  &__block {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+// Choices
+.choices {
+  background-color: $light-grey;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out, outline 0.3s ease-in-out;
+
+  &.is-focused {
+    outline: 1px solid $primary;
+  }
+
+  &.is-focused.is-open {
+    outline: none;
+  }
+
+  &__inner {
+    border: none;
+    background-color: transparent;
+  }
+
+  &__list--dropdown {
+    border-color: $light-grey;
+  }
+
+  &:hover {
+    background-color: rgba(230, 232, 236, 0.4);
+  }
+
+  &:active {
+    background-color: $dark-grey;
+  }
+
+  &__item {
+    &:focus {
+      background-color: rgba(230, 232, 236, 0.4)
+    }
+  }
+}
+
+
+.is-focused .choices__inner,
+.is-open .choices__inner {
+  border: none;
+}
+
+
+.is-open .choices__list--dropdown {
+  margin-top: -10px;
+  padding-top: 9px;
+  border-color: $light-grey;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
+.is-open.is-flipped .choices__list--dropdown {
+  margin-top: 0;
+  margin-bottom: -10px;
+  padding-top: 0;
+  padding-bottom: 9px;
+  border-color: $light-grey;
+  border-radius: 10px 10px 0 0;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  color: $promo-black;
+  background-color: rgba(230, 232, 236, 0.4);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.choices__list--dropdown .choices__item {
+  color: $grey;
+}
+
+.choices__list--dropdown .choices__item:not(:last-child) {
+  border-bottom: 1px solid $light-grey;
+}
+
+.is-open .choices__inner {
+  position: relative;
+  z-index: 10;
+  border: none;
+  border-radius: 10px;
+  background-color: $light-grey;
+}
+
+.choices .choices__list.choices__list--dropdown .is-selected {
+  display: none;
+}
+
+.is-flipped.is-open .choices__inner {
+  border-radius: 10px;
+}

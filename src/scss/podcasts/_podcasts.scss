@@ -1,0 +1,28 @@
+.podcasts {
+  padding-top: 82px;
+  padding-bottom: 94px;
+  background-color: $light-grey;
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__item:nth-last-child(-n+4) {
+    display: none;
+
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

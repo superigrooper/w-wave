@@ -1,0 +1,17 @@
+body {
+  font-family: 'Muller';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 45px;
+  max-width: 1200px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 400;
+  color: $promo-black;
+}

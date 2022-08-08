@@ -35,7 +35,7 @@ const getpug = () => {
 
 // styles
 const styles = () => {
-  return src('./src/scss/main.sass')
+  return src('./src/scss/main.scss')
     .pipe(gulpif(isDev, sourcemaps.init()))
     .pipe(sass())
     .pipe(concat('style.css'))
@@ -116,7 +116,7 @@ const watchFiles = () => {
     }
   });
   watch('./src/**/*.html', html);
-  watch('./src/scss/**/*.sass', styles)
+  watch('./src/scss/**/*.scss', styles)
   watch(['./src/js/**/*.js', '!./src/js/*.min.js'], scripts);
   // gulpif(prod, watch('./src/img/**/*', images));
   watch('./src/pug/**/*.pug', getpug);
