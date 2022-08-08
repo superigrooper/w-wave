@@ -1,0 +1,30 @@
+@mixin link-state {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -10px;
+    bottom: -4px;
+    left: -10px;
+    background-color: $primary-light;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus {
+    color: #fff;
+
+    &::after {
+      opacity: 1;
+      z-index: -1;
+    }
+  }
+
+  &:active {
+    color: $primary-dark;
+  }
+}

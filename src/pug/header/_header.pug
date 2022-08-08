@@ -1,28 +1,36 @@
 include ../data/_categories.pug
-include ../data/_nav-items.pug 
+include ../data/_nav-items.pug
 include ../mixins/_category-item.pug
 include ../data/_broadcast-header.pug
 
 header.header
-  .header__top 
+
+  //- Хедер делим на два блока: верхний и нижний
+  .header__top
     .container.header__top-container
+
+      //- Обёртка для дальнейшего адаптива
       .header__logo-wrap
 
         a.header__logo(href="#" aria-label="Логотип компании")
-          picture 
+          picture
             source(srcset="./img/logo/logo-big.png" media="(max-width: 1902px)")
             source(srcset="./img/logo/logo-mid.png" media="(max-width: 1200px)")
             source(srcset="./img/logo/logo-small.png" media="(max-width: 576px)")
             img(src="./img/logo/logo-big.png", alt="Логотип компании")
 
-      .header__categories.categories 
+      //- Верхнее меню
+      .header__categories.categories
         ul.categories__list
+
+          //- Объект с категориями: там текст для ссылки и значение этой ссылки (адрес)
           each content, target in categories
             li.categories__item
+
               //- Миксин для ссылки
               +link(content, target)(class='categories__link')
-    
-      button.header__search-btn
+
+      button.header__search-btn(aria-label="Поиск по сайту")
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -30,21 +38,29 @@ header.header
 
       form.header__search-form(action="")
         label.header__search-lbl
-          input.header__search-input(type="search") 
+          input.header__search-input(type="search")
       button.btn.btn--small-font.login-btn Вход
-  
-  .header__bottom 
-    .container.header__bottom-container 
-      .header__bottom-wrap 
-        nav.header__nav 
+
+  .header__bottom
+    .container.header__bottom-container
+
+      //- Аналогичная обёртка
+      .header__bottom-wrap
+        nav.header__nav
           ul.header__nav-list
-            each content, target in navItems 
-              li.header__nav-item 
+
+            //- Так же объект с данными для навигации
+            each content, target in navItems
+              li.header__nav-item
+
+                //-  Тот же миксин для ссылки
                 +link(content, target)(class='header__nav-link')
-        .header__broadcasts.broadcasts 
-          each name in broadcastsHeader 
+
+        //- Блок с текущими анными из эфира
+        .header__broadcasts.broadcasts
+          each name in broadcastsHeader
             article.broadcasts__item
-              button.broadcasts__btn
+              button.broadcasts__btn(aria-label="Начать воспроизведение")
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/>
                 </svg>
@@ -52,5 +68,6 @@ header.header
               .broadcasts__content
                 h2.broadcasts__title Сейчас в эфире
                 span.broadcasts__name= name
+
       .header__pegi
-        span.header__pegi-text 12+
+        span.header__pegi-text(aria-label="Возрастное ограниченине 12+") 12+
