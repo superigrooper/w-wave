@@ -1,6 +1,5 @@
 .card-podcast {
   display: flex;
-  // justify-content: space-between
   width: 540px;
   background-color: white;
 
@@ -38,9 +37,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    // padding-top: 21px;
     padding-bottom: 10px;
-    // padding-left: 30px;
   }
 
   &__time {
@@ -71,6 +68,52 @@
     border: none;
     outline: none;
     cursor: pointer;
+
+    svg {
+      circle {
+        transition: stroke 0.3s ease-in-out;
+      }
+
+      path {
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+
+    &:hover {
+      svg {
+        circle {
+          stroke: $primary;
+        }
+
+        path {
+          fill: $primary;
+        }
+      }
+    }
+
+    &:focus-visible {
+      svg {
+        circle {
+          stroke: $primary-light;
+        }
+
+        path {
+          fill: $primary-light;
+        }
+      }
+    }
+
+    &:active {
+      svg {
+        circle {
+          stroke: $primary-dark;
+        }
+
+        path {
+          fill: #fff;
+        }
+      }
+    }
   }
 
   &__stats {
@@ -80,12 +123,28 @@
   }
 
   &__stats-item {
+    position: relative;
     padding: 0;
     color: $grey;
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -3px;
+      bottom: 0;
+      left: -3px;
+      background-color: $primary-light;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+
+    }
 
     &:not(:last-child) {
       margin-right: 32px;
@@ -94,6 +153,43 @@
 
     svg {
       margin-right: 5px;
+
+      path {
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+
+    &:hover {
+      color: $primary;
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+
+    &:focus-visible {
+      color: #fff;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+
+      &::before {
+        opacity: 1;
+        z-index: -1;
+      }
+    }
+
+    &:active {
+      color: $primary-dark;
+
+      svg {
+        path {
+          fill: $primary-dark;
+        }
+      }
     }
   }
 }

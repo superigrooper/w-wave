@@ -15,7 +15,7 @@
     color: $primary;
   }
 
-  &:focus {
+  &:focus-visible {
     color: #fff;
 
     &::after {

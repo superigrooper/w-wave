@@ -156,6 +156,7 @@
     padding: 0;
     font-size: 0;
     background-color: transparent;
+    background-image: url('./img/');
     outline: none;
     border: none;
     cursor: pointer;
@@ -174,7 +175,7 @@
       }
     }
 
-    &:focus {
+    &:focus-visible {
       svg {
         path {
           fill: $primary-light;

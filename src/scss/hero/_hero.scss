@@ -33,8 +33,44 @@
   }
 
   &__link {
+    position: relative;
     margin-right: 2px;
-    padding-left: 5px;
+    // Исключительная мера
+    margin-left: 5px;
+    color: $primary;
+    text-decoration: none;
+    outline: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      right: -2px;
+      bottom: -4px;
+      left: -2px;
+      background-color: $primary-light;
+      opacity: 0;
+    }
+
+    &:hover {
+      border-color: $primary;
+    }
+
+    &:focus-visible {
+      color: #fff;
+
+      &::after {
+        opacity: 1;
+        z-index: -1;
+      }
+    }
+
+    &:active {
+      color: $primary-dark;
+      border-color: $primary-dark;
+    }
   }
 
   &__btn {
