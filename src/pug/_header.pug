@@ -56,7 +56,7 @@ header.header
                 //-  Тот же миксин для ссылки
                 +link(content, target)(class='header__nav-link')
 
-        //- Блок с текущими анными из эфира
+        //- Блок с текущими данными из эфира
         .header__broadcasts.broadcasts
           each name in broadcastsHeader
             article.broadcasts__item
@@ -70,4 +70,4 @@ header.header
                 span.broadcasts__name= name
 
       .header__pegi
-        span.header__pegi-text(aria-label="Возрастное ограниченине 12+") 12+
+        span.header__pegi-text(aria-label="Возрастное ограничение 12+") 12+

@@ -10,15 +10,34 @@
     display: flex;
     flex-direction: column;
     margin-right: 30px;
-    width: 25%;
+    //width: 25%;
   }
 
   &__archive {
     margin-top: auto;
+    padding-top: 120px;
+    background-image: url("../img/programs/archive/mic.png");
+    background-repeat: no-repeat;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 11px 45px 11px 65px;
+    color: $login-black;
+    background-image: url("../img/programs/archive/archive.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 40px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+      background-image: url("../img/programs/archive/archive-white.svg");
+    }
   }
 
   &__content {
-    width: 75%;
+    //width: 75%;
   }
 
   &__block {
@@ -29,11 +48,15 @@
     }
   }
 
-
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    min-height: 255px;
   }
 }
 

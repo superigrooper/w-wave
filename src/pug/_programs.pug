@@ -17,7 +17,7 @@ section.programs#programs
             option.programs__option(value= target, )= value
 
       .programs__archive
-        a.programs__link(href="archive.html") В архив
+        a.programs__link.btn.btn--small-font.login-btn(href="#archive") Архив
         p.programs__descr В архив попадают все передачи, которые вы пропустили!
           span Enjoy :)
     section.programs__content
@@ -29,9 +29,10 @@ section.programs#programs
 
             each item in programsOne[i]
 
-                li.programs__item
-                  article.card-programs
-                    img.card-programs__img(src= item.img)
+              li.programs__item
+                article.card-programs
+                  img.card-programs__img(src= item.img)
+                  div.card-programs__content
                     h3.card-programs__title= item.title
                     span.card-programs__time= item.time
                     a.card-programs__link(href="#") Подробнее
