@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3886b0d7-4d86-4324-9343-903f060505b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/js/toggleClassOnClick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/broadcast/broadcast-pause.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/broadcast/broadcast-play-active.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/broadcast/broadcast-play-focus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/broadcast/broadcast-play-hover.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/broadcast/broadcast-play.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/card/like.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/card/play-btn-big.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/card/play-btn-small.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/card/share.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/common/select-arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icons/search/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/programs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/programs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/header/_header.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/hero/_hero.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/podcasts/_podcasts.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/programs/_programs.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_btn.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_card-podcast.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_card-programs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/header/_header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/hero/_hero.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/mixins/_link-state.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/podcasts/_podcasts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/programs/_programs.scss" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="new-structure" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DTOO3vqfzA7hELWXdtzjkAbYtg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.buildTools.gulp.gulp_package_dir": "C:/Users/Vital/Desktop/Code/w-wave/node_modules/gulp",
+    "last_opened_file_path": "C:/Users/Vital/Desktop/Code/w-wave/src/js/programs.js",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="images" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>images</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gulp.js.images" />
+        <item itemvalue="Gulp.js.images" />
+        <item itemvalue="Gulp.js.images" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3886b0d7-4d86-4324-9343-903f060505b1" name="Changes" comment="" />
+      <created>1660719577272</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660719577272</updated>
+      <workItem from="1660719580039" duration="499000" />
+      <workItem from="1660759199188" duration="855000" />
+      <workItem from="1661585433363" duration="640000" />
+      <workItem from="1661586755854" duration="131000" />
+      <workItem from="1662192010754" duration="3654000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

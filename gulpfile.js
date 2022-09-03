@@ -73,11 +73,11 @@ const images = () => {
 
 // scriprs
 const scripts = () => {
-  return src('./src/js/modules/**/*.js')
+  return src('./src/js/main.js')
   .pipe(gulpif(isDev, sourcemaps.init()))
-  .pipe(babel({
-    presets: ['@babel/env']
-  }))
+  // .pipe(babel({
+  //   presets: ['@babel/env']
+  // }))
   .pipe(concat('main.min.js'))
   .pipe(uglify().on('error', notify.onError()))
   .pipe(gulpif(isDev, sourcemaps.write()))

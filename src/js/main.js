@@ -1,14 +1,7 @@
 import {programs} from "./programs.js";
+import {toggleClassOnClick} from "./toggleClassOnClick.js";
 
-window.addEventListener('DOMContentLoaded', (e) => {
-  const progs = document.querySelectorAll('.programs__block');
-  progs[0].classList.add('programs__block--active');
-
-  const choices = new Choices(document.querySelector('.programs__select'), {
-    searchEnabled: false,
-    shouldSort: false,
-    itemSelectText: '',
-  })
-
-  programs();
-});
+/*========== Подкасты ==========*/
+  const podcastBtns = document.querySelectorAll('.card-podcast__play');
+toggleClassOnClick(podcastBtns, 'card-podcast__play--active');
+programs();

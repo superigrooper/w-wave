@@ -32,11 +32,11 @@ html(lang="ru")
     script(defer src="./libs/js/simplebar.min.js")
     script(defer src="./libs/js/swiper.bundle.min.js")
     script(defer src="./libs/js/tippy.min.js")
-    script(defer src="./js/main.js" type="module")
+    script(defer src="./js/main.min.js" type="module")
 
   body
-    include header/_header.pug
+    include _header.pug
     main.main
-      include hero/_hero.pug
-      include podcasts/_podcasts.pug
-      include programs/_programs.pug
+      include _hero.pug
+      include _podcasts.pug
+      include _programs.pug

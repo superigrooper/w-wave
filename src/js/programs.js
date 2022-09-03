@@ -1,3 +1,11 @@
+const progs = document.querySelectorAll('.programs__block');
+progs[0].classList.add('programs__block--active');
+
+const choices = new Choices(document.querySelector('.programs__select'), {
+  searchEnabled: false,
+  shouldSort: false,
+  itemSelectText: '',
+})
 /**
  *
  * Сравнивает data-атрибут у выбранного селекта и
@@ -5,7 +13,7 @@
  * то данный блок отображается
  *
  * */
-export function programs() {
+export const programs = () => {
   const select = document.querySelector('.choices');
   const contentItems = document.querySelectorAll('.programs__block');
 
