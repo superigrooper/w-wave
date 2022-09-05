@@ -1,7 +1,7 @@
 .hero {
 
   &__container {
-    padding-top: 93px;
+    padding-top: 95px;
     padding-bottom: 93px;
     background-image: url("../img/hero/1920/microphone.png");
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
   }
 
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -24,7 +24,7 @@
 
   &__descr {
     margin-bottom: 45px;
-    max-width: 607px;
+    max-width: 600px;
 
     span {
       margin-right: 5px;

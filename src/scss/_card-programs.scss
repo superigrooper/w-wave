@@ -7,7 +7,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    padding: 20px 16px;
+    padding: 22px 16px 22px 16px;
     height: 100%;
     outline: 1px solid $light-grey;
     outline-offset: -1px;
@@ -17,6 +17,7 @@
     //margin-bottom: 5px;
     font-weight: 500;
     font-size: 20px;
+    line-height: 20px;
     color: $login-black;
   }
 

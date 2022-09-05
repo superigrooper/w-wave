@@ -1,5 +1,5 @@
 .programs {
-  padding-top: 108px;
+  padding-top: 83px;
   padding-bottom: 94px;
 
   &__container {
@@ -9,8 +9,15 @@
   &__info {
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    margin-right: 42px;
     //width: 25%;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: $grey;
   }
 
   &__archive {
@@ -37,6 +44,7 @@
   }
 
   &__content {
+    padding-top: 24px;
     //width: 75%;
   }
 
@@ -170,4 +178,8 @@
   margin: 0;
   transform: rotate(180deg);
   z-index: 100;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  padding-right: 10px;
 }
