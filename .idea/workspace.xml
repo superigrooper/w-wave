@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3886b0d7-4d86-4324-9343-903f060505b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_card-podcast.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_card-podcast.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_card-programs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_card-programs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_hero.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_podcasts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_podcasts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_programs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_programs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +94,7 @@
       <workItem from="1661586755854" duration="131000" />
       <workItem from="1662192010754" duration="12363000" />
       <workItem from="1662208772997" duration="1298000" />
+      <workItem from="1662364942557" duration="249000" />
     </task>
     <servers />
   </component>
