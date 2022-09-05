@@ -14,8 +14,8 @@
     left: 0;
     padding: 0 6px;
     font-size: 10px;
-    color: $promo-black;
-    background-color: $light-grey;
+    color: $main-text;
+    background-color: $grey-light;
   }
 
   &__data {
@@ -39,7 +39,7 @@
   &__time {
     margin-bottom: 5px;
     font-size: 12px;
-    color: $promo-black;
+    color: $main-text;
   }
 
   &__title {
@@ -47,7 +47,7 @@
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
-    color: $promo-black;
+    color: $main-text;
   }
 
   &__name {
@@ -98,7 +98,7 @@
     display: flex;
     align-items: center;
     padding: 5px 0 3px 30px;
-    border-top: 1px solid $light-grey;
+    border-top: 1px solid $grey-light;
   }
 
   &__stats-item {

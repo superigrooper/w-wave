@@ -1,0 +1,105 @@
+.accordion {
+
+  &__item {
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid $grey;
+    transition: border-color 0.3s ease-in-out;
+
+    &:last-child {
+      border-bottom: 1px solid $grey;
+    }
+
+    &.is-active {
+      border-top: 1px solid $primary-light;
+
+      .accordion__btn {
+        border-color: $primary-light;
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .accordion__btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      padding-block: 35px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease-in-out;
+
+      &:hover {
+        .accordion__title {
+          color: $primary-light;
+        }
+
+        svg circle,
+        svg path {
+          stroke: $primary-light;
+        }
+      }
+
+      &:focus {
+        background-color: $accordion-focus-bg;
+        outline: none;
+      }
+
+      &:active {
+        .accordion__title {
+          color: $primary-light;
+        }
+        svg {
+          fill: $primary-light;
+        }
+        svg path {
+          stroke: $white;
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+
+      svg {
+        transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+        circle, path {
+          transition: stroke 0.2s ease-in-out;
+        }
+      }
+
+    }
+
+    .accordion__title {
+      margin: 0;
+      font-family: 'Muller', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      color: $white;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+
+  &__peoples {
+    padding: 0;
+    padding-block: 30px;
+    column-count: 4;
+  }
+
+  &__people {
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    font-family: 'Muller', sans-serif;
+    color: $white;
+    font-size: 16px;
+  }
+}

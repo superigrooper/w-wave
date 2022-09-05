@@ -1,0 +1,24 @@
+include data/_guests-data.pug
+
+section.guests
+  .container.guests__container
+    h2.section-title.section-title--light.guests__title Гости
+    h3.guests__subtitle.section-subtitle.section-subtitle--big У нас бывают:
+    p.guests__descr Блогеры, арт-критики и&nbsp;деятели искусства, музыканты, молодые учёные и&nbsp;люди науки, историки, филологи и&nbsp;много других интересных гостей!
+    .guests__content
+      .guests__accordion
+        ul.accordion__list
+          each item in guestsListPeople
+            li.accordion__item.ac
+              button.accordion__btn.ac-trigger
+                h2.accordion__title.ac-header= item.title
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                  <path d="M16 27L24 19L32 27" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              .ac-panel
+                ul.accordion__peoples
+                  each guest in item.data
+                    li.accordion__people
+                      a.accordion__link(data-path= guest.path, href='#')= guest.name
+      .guests__card

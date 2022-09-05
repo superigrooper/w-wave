@@ -1,5 +1,4 @@
-- var title = "W-WAVE";
-
+-  const title = "W-WAVE";
 doctype html
 html(lang="ru")
 
@@ -22,6 +21,7 @@ html(lang="ru")
     link(rel="stylesheet", href="./libs/css/choices.min.css")
     link(rel="stylesheet", href="./libs/css/simplebar.min.css")
     link(rel="stylesheet", href="./libs/css/swiper-bundle.min.css")
+    link(rel="stylesheet", href="./libs/css/accordion.min.css")
     link(rel="stylesheet", href="./libs/css/normalize.css")
     link(rel="stylesheet", href="css/style.css")
     script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>")
@@ -32,6 +32,7 @@ html(lang="ru")
     script(defer src="./libs/js/simplebar.min.js")
     script(defer src="./libs/js/swiper.bundle.min.js")
     script(defer src="./libs/js/tippy.min.js")
+    script(defer src="./libs/js/accordion.min.js")
     script(defer src="./js/main.min.js" type="module")
 
   body
@@ -40,3 +41,4 @@ html(lang="ru")
       include _hero.pug
       include _podcasts.pug
       include _programs.pug
+      include _guests.pug

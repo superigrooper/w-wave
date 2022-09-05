@@ -64,21 +64,21 @@
 // Кнопки маркета
 .promo-btn {
   padding: 25px 13px;
-  color: $promo;
-  outline: 2px solid $promo;
+  color: $gold;
+  outline: 2px solid $gold;
   outline-offset: -2px;
   border-radius: 100px;
 
   &:hover {
-    color: $promo-black;
-    background-color: $promo;
+    color: $main-text;
+    background-color: $gold;
     outline: none;
   }
 
   &:focus-visible {
-    color: $promo-black;
-    background-color: $promo-dark;
-    outline: 2px solid $promo;
+    color: $main-text;
+    background-color: $gold-dark;
+    outline: 2px solid $gold;
   }
 
   &:active {
@@ -89,12 +89,12 @@
 .login-btn {
   padding: 10px 33px;
   border-radius: 77px;
-  outline: 2px solid $login-black;
+  outline: 2px solid $main-dark;
   outline-offset: -2px;
 
   &:hover {
     color: white;
-    background-color: $login-black;
+    background-color: $main-dark;
   }
 
   &:focus-visible {
@@ -136,7 +136,7 @@
 .date-btn {
   padding: 17px 21px;
   color: $grey;
-  outline: 2px solid $light-grey;
+  outline: 2px solid $grey-light;
   outline-offset: -2px;
   border-radius: 77px;
 

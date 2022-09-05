@@ -13,5 +13,22 @@ body {
 .section-title {
   font-size: 48px;
   font-weight: 400;
-  color: $promo-black;
+  color: $main-text;
+}
+
+.section-title--light {
+  color: #FFF;
+}
+
+.section-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $grey;
+}
+
+.section-subtitle--big {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
 }

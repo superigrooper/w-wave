@@ -1,0 +1,14 @@
+.guests {
+  padding-block: 80px;
+  background-color: $main-dark;
+
+  &__subtitle {
+
+  }
+
+  &__descr {
+    font-size: 20px;
+    line-height: 32px;
+    color: $grey;
+  }
+}

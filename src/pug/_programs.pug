@@ -4,7 +4,7 @@ section.programs#programs
   .container._container
     section.programs__info
       h2.section-title.programs__title Передачи
-      h3.programs__subtitle Автор:
+      h3.programs__subtitle.section-subtitle Автор:
       // Тут используем плагин choices,
         поэтому немного костылей в стилях
       .programs__choice
@@ -19,10 +19,10 @@ section.programs#programs
       .programs__archive
         a.programs__link.btn.btn--small-font.login-btn(href="#archive") Архив
         p.programs__descr В архив попадают все передачи, которые вы пропустили!
-          span Enjoy :)
+          span  Enjoy :)
     section.programs__content
 
-      - for (var i = 0; i < paths.length; i++)
+      - for (let i = 0; i < paths.length; i++)
 
         .programs__block(data-target= paths[i])
           ul.programs__list

@@ -9,15 +9,7 @@
   &__info {
     display: flex;
     flex-direction: column;
-    margin-right: 42px;
-    //width: 25%;
-  }
-
-  &__subtitle {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
-    color: $grey;
+    margin-right: 40px;
   }
 
   &__archive {
@@ -31,7 +23,7 @@
     display: inline-block;
     margin-bottom: 12px;
     padding: 11px 45px 11px 65px;
-    color: $login-black;
+    color: $main-text;
     background-image: url("../img/programs/archive/archive.svg");
     background-repeat: no-repeat;
     background-position-y: center;
@@ -41,11 +33,15 @@
     &:hover {
       background-image: url("../img/programs/archive/archive-white.svg");
     }
+
+  }
+
+  &__descr {
+    color: $grey;
   }
 
   &__content {
     padding-top: 24px;
-    //width: 75%;
   }
 
   &__block {
@@ -70,7 +66,7 @@
 
 // Choices
 .choices {
-  background-color: $light-grey;
+  background-color: $grey-light;
   border: none;
   border-radius: 10px;
   transition: background-color 0.3s ease-in-out, outline 0.3s ease-in-out;
@@ -89,7 +85,7 @@
   }
 
   &__list--dropdown {
-    border-color: $light-grey;
+    border-color: $grey-light;
   }
 
   &:hover {
@@ -97,7 +93,7 @@
   }
 
   &:active {
-    background-color: $dark-grey;
+    background-color: $grey-dark;
   }
 
   &__item {
@@ -117,7 +113,7 @@
 .is-open .choices__list--dropdown {
   margin-top: -10px;
   padding-top: 9px;
-  border-color: $light-grey;
+  border-color: $grey-light;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -128,12 +124,12 @@
   margin-bottom: -10px;
   padding-top: 0;
   padding-bottom: 9px;
-  border-color: $light-grey;
+  border-color: $grey-light;
   border-radius: 10px 10px 0 0;
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  color: $promo-black;
+  color: $main-text;
   background-color: rgba(230, 232, 236, 0.4);
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -143,7 +139,7 @@
 }
 
 .choices__list--dropdown .choices__item:not(:last-child) {
-  border-bottom: 1px solid $light-grey;
+  border-bottom: 1px solid $grey-light;
 }
 
 .is-open .choices__inner {
@@ -151,7 +147,7 @@
   z-index: 10;
   border: none;
   border-radius: 10px;
-  background-color: $light-grey;
+  background-color: $grey-light;
 }
 
 .choices .choices__list.choices__list--dropdown .is-selected {

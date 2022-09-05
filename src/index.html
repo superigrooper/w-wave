@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./libs/css/choices.min.css">
     <link rel="stylesheet" href="./libs/css/simplebar.min.css">
     <link rel="stylesheet" href="./libs/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./libs/css/accordion.min.css">
     <link rel="stylesheet" href="./libs/css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=&lt;ваш API-ключ&gt;"></script>
@@ -28,6 +29,7 @@
     <script defer src="./libs/js/simplebar.min.js"></script>
     <script defer src="./libs/js/swiper.bundle.min.js"></script>
     <script defer src="./libs/js/tippy.min.js"></script>
+    <script defer src="./libs/js/accordion.min.js"></script>
     <script defer src="./js/main.min.js" type="module"></script>
   </head>
   <body>
@@ -467,7 +469,7 @@
         <div class="container programs__container">
           <section class="programs__info">
             <h2 class="section-title programs__title">Передачи</h2>
-            <h3 class="programs__subtitle">Автор:</h3>
+            <h3 class="programs__subtitle section-subtitle">Автор:</h3>
             <!-- Тут используем плагин choices,поэтому немного костылей в стилях
             -->
             <div class="programs__choice">
@@ -484,7 +486,7 @@
               </select>
             </div>
             <div class="programs__archive"><a class="programs__link btn btn--small-font login-btn" href="#archive">Архив</a>
-              <p class="programs__descr">В архив попадают все передачи, которые вы пропустили!<span>Enjoy :)</span></p>
+              <p class="programs__descr">В архив попадают все передачи, которые вы пропустили!<span> Enjoy :)</span></p>
             </div>
           </section>
           <section class="programs__content">
@@ -673,6 +675,112 @@
               </ul>
             </div>
           </section>
+        </div>
+      </section>
+      <section class="guests">
+        <div class="container guests__container">
+          <h2 class="section-title section-title--light guests__title">Гости</h2>
+          <h3 class="guests__subtitle section-subtitle section-subtitle--big">У нас бывают:</h3>
+          <p class="guests__descr">Блогеры, арт-критики и&nbsp;деятели искусства, музыканты, молодые учёные и&nbsp;люди науки, историки, филологи и&nbsp;много других интересных гостей!</p>
+          <div class="guests__content">
+            <div class="guests__accordion">
+              <ul class="accordion__list">
+                <li class="accordion__item ac">
+                  <button class="accordion__btn ac-trigger">
+                    <h2 class="accordion__title ac-header">Блогеры</h2><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+<path d="M16 27L24 19L32 27" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                  </button>
+                  <div class="ac-panel">
+                    <ul class="accordion__peoples">
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_1" href="#">Сергей Денисов</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_2" href="#">Матвей Мечников</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_3" href="#">Константин Прусино</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_4" href="#">Иван Калитников</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_5" href="#">Евгений Войновский</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_6" href="#">Ольга Мартынова</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_7" href="#">Дмитрий Михалок</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_8" href="#">Пётр Пиотровский</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_9" href="#">Олег Свиридовский</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_10" href="#">Владислав Кауперс</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_11" href="#">Михаил Пожитников</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_12" href="#">Георгий Полуян</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_13" href="#">Денис Тельман</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_14" href="#">Юрий Горин</a></li>
+                      <li class="accordion__people"><a class="accordion__link" data-path="path_15" href="#">Максим Сергеев</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion__item ac">
+                  <button class="accordion__btn ac-trigger">
+                    <h2 class="accordion__title ac-header">Арт-критики</h2><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+<path d="M16 27L24 19L32 27" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                  </button>
+                  <div class="ac-panel">
+                    <ul class="accordion__peoples">
+                      <li class="accordion__people"><a class="accordion__link" data-path="" href="#">Пока пусто...</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion__item ac">
+                  <button class="accordion__btn ac-trigger">
+                    <h2 class="accordion__title ac-header">Художники</h2><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+<path d="M16 27L24 19L32 27" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                  </button>
+                  <div class="ac-panel">
+                    <ul class="accordion__peoples">
+                      <li class="accordion__people"><a class="accordion__link" data-path="" href="#">Пока пусто...</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion__item ac">
+                  <button class="accordion__btn ac-trigger">
+                    <h2 class="accordion__title ac-header">Люди науки</h2><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+<path d="M16 27L24 19L32 27" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                  </button>
+                  <div class="ac-panel">
+                    <ul class="accordion__peoples">
+                      <li class="accordion__people"><a class="accordion__link" data-path="" href="#">Пока пусто...</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion__item ac">
+                  <button class="accordion__btn ac-trigger">
+                    <h2 class="accordion__title ac-header">Историки</h2><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+<path d="M16 27L24 19L32 27" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                  </button>
+                  <div class="ac-panel">
+                    <ul class="accordion__peoples">
+                      <li class="accordion__people"><a class="accordion__link" data-path="" href="#">Пока пусто...</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion__item ac">
+                  <button class="accordion__btn ac-trigger">
+                    <h2 class="accordion__title ac-header">Филологи</h2><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
+<path d="M16 27L24 19L32 27" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+</svg>
+                  </button>
+                  <div class="ac-panel">
+                    <ul class="accordion__peoples">
+                      <li class="accordion__people"><a class="accordion__link" data-path="" href="#">Пока пусто...</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="guests__card"></div>
+          </div>
         </div>
       </section>
     </main>
