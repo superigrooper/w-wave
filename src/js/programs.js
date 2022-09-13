@@ -14,7 +14,7 @@ const choices = new Choices(document.querySelector('.programs__select'), {
  *
  * */
 export const programs = () => {
-  const select = document.querySelector('.choices');
+  const select =       document.querySelector('.choices');
   const contentItems = document.querySelectorAll('.programs__block');
 
   select.addEventListener('change', () => {

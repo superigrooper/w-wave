@@ -1,0 +1,33 @@
+include data/_playlists.pug
+
+section.playlists#playlists
+  .container.playlists__container
+    .playlists__info
+      h2.playlists__title.section-title Плейлисты
+      .playlists__genres
+        h3.playlists__subtitle.section-subtitle Жанр
+        form.playlists__form(action="")
+          ul.playlists__list
+            each id, text in genres
+              li.playlists__item
+                label.playlists__label(for= id)
+                  input.playlists__input(type="radio", id= id, value= id, name="playlist")
+                  span.playlists__custom-radio
+                  = text
+      .playlists__pegi
+        p.playlists__pegi-descr Раздел &laquo;Плейлисты&raquo; может содержать информацию, не&nbsp;предназначенную для несовершеннолетних
+        div.playlists__pegi-date &copy&nbsp
+          span.playlists__pegi-year
+          span.playlists__pegi-logo  &nbsp/ W-Wave
+        span.playlists__pegi-icon 18+
+    .playlists__content
+      ul.playlists__artists
+        each artist in artists
+          li.playlists__artist
+            article.playlists__card
+              picture
+                 source(srcset= artist.pictureMobile, media="(max-width: 1110px)")
+                 source(srcset= artist.pictureDesktop, media="(max-width: 1920px)")
+                 img(src= artist.pictureDesktop, alt= artist.title)
+              h3= artist.title
+              span= artist.info

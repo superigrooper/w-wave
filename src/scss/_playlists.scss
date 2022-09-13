@@ -1,0 +1,100 @@
+.playlists {
+  padding-block: 94px;
+
+  &__container {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__info {
+    width: 350px;
+  }
+
+  &__form {
+    margin-bottom: 22px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__label {
+    position: relative;
+    padding-left: 38px;
+
+    &:hover > .playlists__custom-radio {
+      border-color: $primary;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    &:checked + .playlists__custom-radio {
+      border: 7px solid $primary;
+    }
+
+    &:focus-visible + .playlists__custom-radio {
+      border-color: $primary;
+      background-color: $grey;
+    }
+  }
+
+  &__custom-radio {
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border: 2px solid $grey;
+    border-radius: 100%;
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    margin-bottom: 12px;
+  }
+
+  &__pegi {
+    padding-top: 38px;
+    color: $grey;
+    border-top: 1px solid $grey;
+  }
+
+  &__pegi-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: start;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 16px;
+    border: 1px solid $grey;
+    border-radius: 100%;
+  }
+
+  &__content {
+    width: 730px;
+  }
+
+  &__artists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__card {
+    max-width: 160px;
+  }
+}

@@ -98,8 +98,40 @@
   }
 
   &__link {
+    position: relative;
     font-family: 'Muller', sans-serif;
     color: $white;
     font-size: 16px;
+    transition: color 0.3s ease-in-out;
+    z-index: 10;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      bottom: -3px;
+      left: -3px;
+      background-color: $primary-light;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+
+    }
+
+    &:hover {
+      color: $primary-light;
+    }
+
+    &:focus-visible {
+      outline: none;
+        &::after {
+          opacity: 1;
+          z-index: -1;
+        }
+    }
+
+    &:active {
+      color: $primary-dark;
+    }
   }
 }
