@@ -21,4 +21,12 @@ section.guests
                   each guest in item.data
                     li.accordion__people
                       a.accordion__link(data-path= guest.path, href='#')= guest.name
-      .guests__card
+      .guests__info
+        article.guests__card.card-guests
+          img.card-guests__img(src="", alt="")
+          .card-guests__social
+            ul.card-guests__list
+              each item in socials
+                li.card-guests__item
+                  a.card-guests__link(href="#")
+

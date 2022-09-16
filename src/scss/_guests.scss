@@ -2,13 +2,32 @@
   padding-block: 80px;
   background-color: $main-dark;
 
-  &__subtitle {
+  &__title {
+    margin-bottom: 12px;
+  }
 
+  &__subtitle {
+    margin-bottom: 8px;
   }
 
   &__descr {
+    margin-bottom: 50px;
+    width: 825px;
     font-size: 20px;
     line-height: 32px;
     color: $grey;
+  }
+
+  &__content {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__accordion {
+    width: 730px;
+  }
+
+  &__info {
+    width: 350px;
   }
 }
