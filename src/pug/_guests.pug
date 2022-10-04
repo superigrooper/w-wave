@@ -1,6 +1,6 @@
 include data/_guests-data.pug
 
-section.guests
+section.guests#guests
   .container.guests__container
     h2.section-title.section-title--light.guests__title Гости
     h3.guests__subtitle.section-subtitle.section-subtitle--big У нас бывают:
@@ -28,5 +28,7 @@ section.guests
             ul.card-guests__list
               each item in socials
                 li.card-guests__item
-                  a.card-guests__link(href="#")
+                  a.card-guests__link(href= item.link)
+                    item.icon
+
 

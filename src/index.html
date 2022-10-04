@@ -470,15 +470,8 @@
           <section class="programs__info">
             <h2 class="section-title programs__title">Передачи</h2>
             <h3 class="programs__subtitle section-subtitle">Автор:</h3>
-            <!-- Тут используем плагин choices,поэтому немного костылей в стилях
-            -->
             <div class="programs__choice">
               <select class="programs__select" name="programs">
-                <!-- В массиве options содержатся имена авторов
-                их ключи: one, two и т.д. связываются через data-атрибуты с блоками передач,
-                которые эти авторы делают и при выборе определенного автора
-                отображается соответствующий ему блок
-                -->
                 <option class="programs__option" value="one">Дмитрий Гутенберг</option>
                 <option class="programs__option" value="two">Татьяна Флеганова</option>
                 <option class="programs__option" value="three">Анна Васильева</option>
@@ -677,7 +670,7 @@
           </section>
         </div>
       </section>
-      <section class="guests">
+      <section class="guests" id="guests">
         <div class="container guests__container">
           <h2 class="section-title section-title--light guests__title">Гости</h2>
           <h3 class="guests__subtitle section-subtitle section-subtitle--big">У нас бывают:</h3>
@@ -779,7 +772,20 @@
                 </li>
               </ul>
             </div>
-            <div class="guests__info"></div>
+            <div class="guests__info">
+              <article class="guests__card card-guests"><img class="card-guests__img" src="" alt="">
+                <div class="card-guests__social">
+                  <ul class="card-guests__list">
+                    <li class="card-guests__item"><a class="card-guests__link" href="#">
+                        <item class="icon"></item></a></li>
+                    <li class="card-guests__item"><a class="card-guests__link" href="#">
+                        <item class="icon"></item></a></li>
+                    <li class="card-guests__item"><a class="card-guests__link" href="#">
+                        <item class="icon"></item></a></li>
+                  </ul>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
