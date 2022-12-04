@@ -1,65 +1,71 @@
-const { src, dest, series, watch, parallel } = require('gulp')
-const concat = require('gulp-concat');
-const htmlMin = require('gulp-htmlmin');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
-const browserSync = require('browser-sync').create();
-const image = require('gulp-image');
-const babel = require('gulp-babel');
-const notify = require('gulp-notify');
-const uglify = require('gulp-uglify-es').default;
-const sourcemaps = require('gulp-sourcemaps');
-const del = require('del');
-const gulpif = require('gulp-if');
-const sass = require('gulp-sass')(require('sass'));
-const pug = require('gulp-pug');
-const pugbem = require('gulp-pugbem');
+const {src, dest, watch, series, parallel} = require('gulp');
 
-const isProd = process.argv.includes('--prod');
-const isDev = !isProd;
-console.log(isProd);
+const HTMLMin           = require('gulp-htmlmin');
+const concat            = require('gulp-concat');
+const autoprefixer      = require('gulp-autoprefixer');
+const cleanCSS          = require('gulp-clean-css');
+const sourcemaps        = require('gulp-sourcemaps');
+const browserSync       = require('browser-sync').create();
+const del               = require('del');
+const gulpIf            = require('gulp-if');
+const sprite            = require('gulp-svg-sprite');
+const image             = require('gulp-image');
+const babel             = require('gulp-babel');
+const notify            = require('gulp-notify');
+const uglify            = require('gulp-uglify-es').default;
+const sass              = require('gulp-sass')(require('sass'));
+const groupMediaQueries = require('gulp-group-css-media-queries');
+const pug               = require('gulp-pug');
+const pugbem            = require('gulp-pugbem');
 
-// clean
-const clean = () => {
-  return del(['./dist'])
+const isProd = process.argv.includes('prod');
+const isDev  = !isProd;
+
+const html = () => {
+  return src('./dev/index.html')
+    .pipe(HTMLMin({ collapseWhitespace: true }))
+    .pipe(gulpIf(isProd, dest('./build')))
+    .pipe(browserSync.stream())
 }
-
 const getpug = () => {
   return src('./src/pug/index.pug')
     .pipe(pug({
       pretty: true,
       plugins: [pugbem]
     }))
-    .pipe(dest('./src'))
+    .pipe(dest('./dev'))
 }
 
-// styles
 const styles = () => {
   return src('./src/scss/main.scss')
-    .pipe(gulpif(isDev, sourcemaps.init()))
-    .pipe(sass())
-    .pipe(concat('style.css'))
-    .pipe(autoprefixer({
-        overrideBrowserslist: ['last 10 versions'],
-        grid: true
+  .pipe(gulpIf(isDev, sourcemaps.init(undefined)))
+  .pipe(sass())
+  .pipe(concat('style.css'))
+  .pipe(autoprefixer({overrideBrowserslist: ['last 5 versions']}))
+  .pipe(groupMediaQueries())
+  .pipe(gulpIf(isProd, cleanCSS({ level: 1 } ))).on('error', notify.onError({
+      title: 'Minification error',
+      message: 'Error: <%= error.message %>',
+    }))
+  .pipe(gulpIf(isDev, sourcemaps.write(undefined, undefined)))
+  .pipe(gulpIf(isDev, dest('./dev/css')))
+  .pipe(gulpIf(isProd, dest('./build/css')))
+  .pipe(browserSync.stream())
+}
+
+const svgSprites = () => {
+  return src('src/img/svg/**/*.svg')
+  .pipe(sprite({
+    mode: {
+      stack: {
+        sprite: '../sprite.svg'
       }
-    ))
-    .pipe(gulpif(isProd, cleanCSS({ level: 2 })))
-    .pipe(gulpif(isDev, sourcemaps.write()))
-    .pipe(gulpif(isDev, dest('./src/css')))
-    .pipe(gulpif(isProd, dest('./dist/css')))
-    .pipe(browserSync.stream())
+    }
+  }))
+  .pipe(gulpIf(isDev, dest('./dev/img')))
+  .pipe(gulpIf(isProd, dest('./build/img')))
 }
 
-// htmlmin
-const html = () => {
-  return src('./src/index.html')
-    .pipe(htmlMin({ collapseWhitespace: true }))
-    .pipe(gulpif(isProd, dest('./dist')))
-    .pipe(browserSync.stream())
-}
-
-// images
 const images = () => {
   return src([
     './src/img/**/*.jpg',
@@ -67,67 +73,65 @@ const images = () => {
     './src/img/**/*.png',
     './src/img/**/*.svg',
   ])
-  .pipe(image())
-  .pipe(dest('./dist/img'))
+  .pipe(gulpIf(isDev, dest('./dev/img')))
+  .pipe(gulpIf(isProd, image()))
+  .pipe(gulpIf(isProd, dest('./build/img')))
 }
 
-// scriprs
 const scripts = () => {
-  return src('./src/js/main.js')
-  .pipe(gulpif(isDev, sourcemaps.init()))
-  .pipe(concat('main.min.js'))
-  .pipe(uglify().on('error', notify.onError()))
-  .pipe(gulpif(isDev, sourcemaps.write()))
-  .pipe(gulpif(isDev, dest('./src/js')))
-  .pipe(gulpif(isProd, dest('./dist/js')))
+  return src([
+    'src/js/modules/**/*.js',
+    'src/js/main.js'
+  ])
+  .pipe(gulpIf(isDev, sourcemaps.init(undefined)))
+  .pipe(concat('main.js'))
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
+  .pipe(gulpIf(isDev, sourcemaps.write(undefined, undefined)))
+  .pipe(dest('./dev/js'))
+  .pipe(gulpIf(isProd, uglify().on('error', notify.onError())))
+  .pipe(gulpIf(isProd, dest('./build/js')))
   .pipe(browserSync.stream())
 }
 
-// resources
-const libs = () => {
-  return src('./src/libs/**/*')
-    .pipe(dest('./dist/libs'))
+const resources = () => {
+  return src('./src/assets/**/*')
+  .pipe(gulpIf(isDev, dest('./dev/assets')))
+  .pipe(gulpIf(isProd, dest('./build/assets')))
 }
 
-const fonts = () => {
-  return src('./src/fonts/**/*')
-    .pipe(dest('./dist/fonts'))
-}
-
-// icons
-const icons = () => {
-  return src('./src/img/icons/**/*')
-    .pipe(dest('./dist/img/icons'))
-}
-
-// favicon
 const favicon = () => {
   return src('./src/favicon.ico')
-    .pipe(dest('./dist'))
+    .pipe(gulpIf(isDev, dest('./dev')))
+    .pipe(gulpIf(isProd, dest('./build')))
 }
 
 const watchFiles = () => {
   browserSync.init({
-    server: {
-      baseDir: './src'
-    }
-  });
-  watch('./src/**/*.html', html);
-  watch('./src/scss/**/*.scss', styles)
-  watch(['./src/js/**/*.js', '!./src/js/*.min.js'], scripts);
-  // gulpif(prod, watch('./src/img/**/*', images));
+      server: {
+        baseDir: './dev'
+      }
+    });
+  watch('./dev/index.html', html);
+  watch('./src/scss/**/*.scss', styles);
+  watch('./src/img/svg/**/*.svg', svgSprites);
+  watch('./src/js/**/*.js', scripts);
+  watch('./src/lib/**', resources);
   watch('./src/pug/**/*.pug', getpug);
 }
 
-exports.styles = styles;
-exports.html = html;
-exports.scripts = scripts;
-exports.images = images;
-exports.clean = clean;
-exports.getpug = getpug;
+const clean = () => del('./build')
 
-// run gulp --prod
-exports.default = series(clean, styles, html, scripts, libs, icons, fonts, favicon, images);
+exports.clean        = clean;
+exports.html         = html;
+exports.styles       = styles;
+exports.svgSprites   = svgSprites;
+exports.images       = images;
+exports.scripts      = scripts;
+exports.resources    = resources;
+exports.favicon      = favicon;
+exports.getpug       = getpug;
 
-// run gulp dev
-exports.dev = parallel(getpug, html, styles, scripts, watchFiles);
+exports.dev  = parallel(getpug, styles, images, scripts, svgSprites, resources, favicon, watchFiles);
+exports.prod = series(clean, html, styles, images, scripts, resources, svgSprites, favicon);

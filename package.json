@@ -20,6 +20,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
     "gulp-image": "^5.1.0",
@@ -28,6 +29,7 @@
     "gulp-pugbem": "^2.2.4",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.1",
     "gulp-uglify-es": "^3.0.0",
     "sass": "^1.53.0",
     "yargs": "^17.5.1"

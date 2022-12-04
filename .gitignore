@@ -1,4 +1,4 @@
 node_modules
-dist
-src/js/main.min.js
+build
+dev
 .idea

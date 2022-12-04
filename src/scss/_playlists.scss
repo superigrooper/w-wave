@@ -23,6 +23,7 @@
   &__label {
     position: relative;
     padding-left: 38px;
+    cursor: pointer;
 
     &:hover > .playlists__custom-radio {
       border-color: $primary;

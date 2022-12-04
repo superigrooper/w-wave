@@ -4,7 +4,7 @@
  * Назнчает переданный класс по клику на текущий элемент массива
  * и удаляет класс у остальных элементов.
  * */
-export const toggleClassOnClick = (items, className) => {
+const toggleClassOnClick = (items, className) => {
   items.forEach((item) => {
     item.addEventListener('click', (e) => {
       let currentBtn = e.currentTarget;
