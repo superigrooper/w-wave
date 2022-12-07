@@ -19,6 +19,11 @@
     max-width: 160px;
   }
 
+  &__content-wrap {
+    display: flex;
+    align-items: center;
+  }
+
   &__search-btn {
     margin-right: 24px;
     padding: 0;
@@ -81,11 +86,12 @@
     display: flex;
     margin: 0;
     padding: 0;
+    gap: 55px;
   }
 
-  &__nav-item:not(:last-child) {
-    margin-right: 55px;
-  }
+  // &__nav-item:not(:last-child) {
+  //   margin-right: 55px;
+  // }
 
   &__nav-link {
     position: relative;
@@ -112,19 +118,184 @@
       border-radius: 100%;
     }
   }
+
+  &__burger {
+    display: none;
+  }
+
+  &__mobile-open {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    color: $primary;
+    line-height: 16px;
+
+    svg { margin-right: 5px; }
+  }
+
+  &__mobile-brd {
+    display: none;
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (max-width: 1200px) {
+    &__top-container {
+      flex-direction: column;
+      align-items: start;
+      padding: 0;
+      max-width: 100%;
+    }
+
+    &__logo-wrap {
+      margin: 0;
+      padding-block: 23px;
+      padding-left: 100px;
+      width: 100%;
+      background-color: $grey-light;
+    }
+
+    &__logo {
+      width: 112px;
+      height: 14px;
+    }
+
+    &__content-wrap {
+      justify-content: space-between;
+      padding: 20px 100px;
+      width: 100%;
+    }
+
+    &__bottom-container {
+      padding: 22px 100px;
+    }
+
+    &__bottom-wrap {
+      justify-content: space-between;
+      padding-block: 7px;
+      width: 100%;
+    }
+
+    &__nav {
+      flex-grow: 1;
+      padding-right: 35px;
+
+      &-list {
+        justify-content: space-between;
+        gap: 0;
+      }
+    }
+
+    &__broadcasts { margin: 0; }
+
+    &__pegi {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    &__burger {
+      display: block;
+      margin-right: auto;
+    }
+
+    &__logo-wrap {
+      padding-left: 114px;
+    }
+
+    &__content-wrap {
+      padding-inline: 114px;
+    }
+
+    &__categories {
+      display: none;
+    }
+
+    &__bottom-container {
+      display: flex;
+      align-items: center;
+      padding-inline: 114px;
+    }
+
+    &__bottom-wrap {
+      padding: 0;
+    }
+
+    &__nav {
+      border: none;
+      padding-block: 0;
+    }
+
+    &__broadcasts {
+      display: none;
+    }
+
+    &__mobile-brd {
+      display: block;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__logo-wrap {
+      padding-left: 50px;
+    }
+
+    &__content-wrap {
+      padding-inline: 50px;
+    }
+
+    &__bottom-container {
+      padding-inline: 50px;
+    }
+
+    &__search-btn {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__logo-wrap {
+      padding-left: 32px;
+    }
+
+    &__content-wrap {
+      padding-inline: 32px;
+    }
+
+    &__bottom-container {
+      border-right: 1px solid var(--grey-light);
+      border-left: 1px solid var(--grey-light);
+    }
+
+    &__bottom-wrap {
+      display: none;
+    }
+
+    &__bottom-container {
+      padding: 0;
+    }
+
+    &__mobile-brd {
+      display: none;
+    }
+
+    &__mobile-open {
+      display: flex;
+    }
+  }
 }
 
-.categories {
+
+.page-nav {
   margin-right: 80px;
 
   &__list {
     display: flex;
     margin: 0;
     padding: 0;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 59px;
+    gap: 59px;
   }
 
   &__link {
@@ -136,6 +307,14 @@
     transition: color 0.3s ease-in-out;
 
     @include link-state;
+  }
+
+  @media (max-width: 1200px) {
+    margin-right: 0;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
   }
 }
 
@@ -161,35 +340,11 @@
     border: none;
     cursor: pointer;
 
-    svg {
-      path {
-        transition: fill 0.3s ease-in-out;
-      }
-    }
+    path { transition: fill 0.3s ease-in-out; }
 
-    &:hover {
-      svg {
-        path {
-          fill: $primary;
-        }
-      }
-    }
-
-    &:focus-visible {
-      svg {
-        path {
-          fill: $primary-light;
-        }
-      }
-    }
-
-    &:active {
-      svg {
-        path {
-          fill: $primary-dark;
-        }
-      }
-    }
+    &:hover         { path { fill: $primary; } }
+    &:focus-visible { path { fill: $primary-light;} }
+    &:active        { path { fill: $primary-dark; } }
   }
 
   &__title {
@@ -209,6 +364,13 @@
 
     &::after {
       content: close-quote;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__item {
+      padding-right: 18px;
+      padding-left: 10px;
     }
   }
 }

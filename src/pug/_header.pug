@@ -14,32 +14,47 @@ header.header
 
         a.header__logo(href="#" aria-label="Логотип компании")
           picture
-            source(srcset="./img/logo/logo-big.png" media="(max-width: 1902px)")
-            source(srcset="./img/logo/logo-mid.png" media="(max-width: 1200px)")
             source(srcset="./img/logo/logo-small.png" media="(max-width: 576px)")
+            source(srcset="./img/logo/logo-mid.png" media="(max-width: 1200px)")
+            source(srcset="./img/logo/logo-big.png" media="(max-width: 1902px)")
             img(src="./img/logo/logo-big.png", alt="Логотип компании")
 
-      //- Верхнее меню
-      .header__categories.categories
-        ul.categories__list
+      .header__content-wrap
+        //- burger
+        button.header__burger.burger.btn(aria-label="Открыть меню")
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_24531_4514)">
+              <rect width="24" height="3" rx="1.5" fill="#6D31EE" />
+              <rect y="21" width="24" height="3" rx="1.5" fill="#6D31EE" />
+              <rect y="11" width="24" height="3" rx="1.5" fill="#6D31EE" />
+            </g>
+            <defs>
+              <clipPath id="clip0_24531_4514">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+            </svg>
+        //- Верхнее меню
+        nav.header__page-nav.page-nav
+          ul.page-nav__list
 
-          //- Объект с категориями: там текст для ссылки и значение этой ссылки (адрес)
-          each content, target in categories
-            li.categories__item
+            //- Объект с категориями: там текст для ссылки и значение этой ссылки (адрес)
+            each content, target in categories
+              li.page-nav__item
 
-              //- Миксин для ссылки
-              +link(content, target)(class='categories__link')
+                //- Миксин для ссылки
+                +link(content, target)(class='page-nav__link')
 
-      button.header__search-btn(aria-label="Поиск по сайту")
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        button.header__search-btn(aria-label="Поиск по сайту")
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
 
-      form.header__search-form(action="")
-        label.header__search-lbl
-          input.header__search-input(type="search")
-      button.btn.btn--small-font.login-btn Вход
+        form.header__search-form(action="")
+          label.header__search-lbl
+            input.header__search-input(type="search")
+        button.btn.btn--small-font.login-btn Вход
 
   .header__bottom
     .container.header__bottom-container
@@ -71,3 +86,13 @@ header.header
 
       .header__pegi
         span.header__pegi-text(aria-label="Возрастное ограничение 12+") 12+
+      button.header__mobile-brd.btn(aria-label="Слушать эфир")
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/>
+        </svg>
+      button.header__mobile-open.btn(aria-label="Узнать, что сейчас в эфире")
+       <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="7.5" cy="7.5" r="7.5" fill="#6D31EE" />
+          <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white" />
+          <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white"/>
+          </svg> Что в эфире?

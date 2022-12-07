@@ -16,7 +16,6 @@
 
   &__item:nth-last-child(-n+4) {
     display: none;
-
   }
 
   &__btn {
@@ -24,5 +23,16 @@
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    &:disabled {
+      // pointer-events: none;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &:disabled:hover {
+      background-color: transparent;
+      color: $primary;
+    }
   }
 }

@@ -23,6 +23,9 @@
     display: inline-block;
     margin-bottom: 12px;
     padding: 11px 45px 11px 65px;
+    border-radius: 77px;
+    outline: 2px solid $main-dark;
+    outline-offset: -2px;
     color: $main-text;
     background-image: url("../img/programs/archive/archive.svg");
     background-repeat: no-repeat;
