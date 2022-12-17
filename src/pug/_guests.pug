@@ -19,16 +19,34 @@ section.guests#guests
               .ac-panel
                 ul.accordion__peoples
                   each guest in item.data
-                    li.accordion__people
-                      a.accordion__link(data-path= guest.path, href='#')= guest.name
+                    if guest.active
+                      li.accordion__people
+                        a.accordion__link.accordion__link--active(data-path= guest.path, href='#')= guest.name
+                    else
+                       li.accordion__people
+                        a.accordion__link(data-path= guest.path, href='#')= guest.name
       .guests__info
-        article.guests__card.card-guests
-          img.card-guests__img(src="", alt="")
-          .card-guests__social
-            ul.card-guests__list
-              each item in socials
-                li.card-guests__item
-                  a.card-guests__link(href= item.link)
-                    item.icon
-
-
+        each guest in cardsGuest
+          if guest.active
+            article.guests__card.card-guest.card-guest--active(data-target= guest.target)
+              img.card-guests__img(src= guest.img, alt= guest.title)
+              ul.card-guests__list-social
+                each item in guest.socials
+                  li.card-guests__item
+                    a.card-guests__link(href= item.url)
+                      | !{item.icon}
+              h3.card-guests__title= guest.title
+              p.card-guest__desc= guest.desc
+              a.card-guest__link-broad(href= guest.guestBroad) Эфиры с гостем
+          else
+            article.guests__card.card-guest(data-target= guest.target)
+              img.card-guests__img(src= guest.img, alt= guest.title)
+              ul.card-guests__list-social
+                each item in guest.socials
+                  li.card-guests__item
+                    a.card-guests__link(href= item.url)
+                      | !{item.icon}
+              h3.card-guests__title= guest.title
+              p.card-guest__desc
+                |!{guest.desc}
+              a.card-guest__link-broad(href= guest.guestBroad) Эфиры с гостем

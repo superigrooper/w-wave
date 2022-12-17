@@ -1,0 +1,8 @@
+.card-guest {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
