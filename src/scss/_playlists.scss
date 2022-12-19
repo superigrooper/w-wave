@@ -1,4 +1,5 @@
 .playlists {
+  position: relative;
   padding-block: 94px;
 
   &__container {
@@ -23,6 +24,8 @@
   &__label {
     position: relative;
     padding-left: 38px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
 
     &:hover > .playlists__custom-radio {
@@ -49,7 +52,7 @@
 
   &__custom-radio {
     position: absolute;
-    top: -7px;
+    top: 0;
     left: 0;
     width: 26px;
     height: 26px;
@@ -92,10 +95,71 @@
   &__artists {
     display: flex;
     flex-wrap: wrap;
-    gap: 4%;
+    gap: 16px;
+  }
+
+  &__artist {
+    min-height: 224px;
   }
 
   &__card {
-    max-width: 160px;
+    height: 100%;
+  }
+
+  &__card-content {
+    padding: 16px;
+    border: 1px solid $grey-light;
+  }
+
+  &__card-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: $main-text;
+  }
+
+  &__card-desc {
+    font-size: 12px;
+    line-height: 12px;
+    color: $grey;
+  }
+
+  @media (max-width: 1200px) {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__info {
+      width: auto;
+    }
+
+    &__list {
+      display: block;
+      width: 500px;
+      column-count: 2;
+    }
+
+    &__item {
+      width: max-content;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__pegi {
+      position: absolute;
+      left: 100px;
+      bottom: 0;
+    }
+
+    &__content {
+      width: auto;
+    }
+
+    &__artists {
+      display: block;
+      column-count: 3;
+    }
   }
 }
+

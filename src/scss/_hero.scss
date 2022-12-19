@@ -84,4 +84,10 @@
       background-position: 669px 95px;
     }
   }
+
+  @media (max-width: 1024px) {
+    &__container {
+      background-image: none;
+    }
+  }
 }

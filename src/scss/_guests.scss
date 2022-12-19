@@ -30,4 +30,22 @@
   &__info {
     width: 350px;
   }
+
+  @media (max-width: 1023px) {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__descr {
+      width: auto;
+    }
+
+    &__accordion {
+      width: auto;
+    }
+
+    &__info {
+      width: auto;
+    }
+  }
 }

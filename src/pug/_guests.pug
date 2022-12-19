@@ -29,18 +29,28 @@ section.guests#guests
         each guest in cardsGuest
           if guest.active
             article.guests__card.card-guest.card-guest--active(data-target= guest.target)
-              img.card-guests__img(src= guest.img, alt= guest.title)
-              ul.card-guests__list-social
+              picture
+                source(srcset= guest.img320, media="(max-width: 767px)")
+                source(srcset= guest.img768, media="(max-width: 1023px)")
+                source(srcset= guest.img1024, media="(max-width: 1200px)")
+                source(srcset= guest.img1920, media="(max-width: 1920px)")
+                img(src= guest.img1920, alt= guest.title).card-guest__img
+              ul.card-guest__list-social
                 each item in guest.socials
                   li.card-guests__item
                     a.card-guests__link(href= item.url)
                       | !{item.icon}
-              h3.card-guests__title= guest.title
+              h3.card-guest__title= guest.title
               p.card-guest__desc= guest.desc
-              a.card-guest__link-broad(href= guest.guestBroad) Эфиры с гостем
+              a.card-guest__link-broad.btn.primary-btn--light.primary-btn(href= guest.guestBroad) Эфиры с гостем
           else
             article.guests__card.card-guest(data-target= guest.target)
-              img.card-guests__img(src= guest.img, alt= guest.title)
+              picture
+                source(srcset= guest.img320, media="(max-width: 767px)")
+                source(srcset= guest.img768, media="(max-width: 1023px)")
+                source(srcset= guest.img1024, media="(max-width: 1200px)")
+                source(srcset= guest.img1920, media="(max-width: 1920px)")
+                img(src= guest.img1920, alt= guest.title).card-guest__img
               ul.card-guests__list-social
                 each item in guest.socials
                   li.card-guests__item
@@ -49,4 +59,4 @@ section.guests#guests
               h3.card-guests__title= guest.title
               p.card-guest__desc
                 |!{guest.desc}
-              a.card-guest__link-broad(href= guest.guestBroad) Эфиры с гостем
+              a.card-guest__link-broad.btn.primary-btn--light.primary-btn(href= guest.guestBroad) Эфиры с гостем

@@ -138,4 +138,16 @@
       color: $primary-light;
     }
   }
+
+  @media (max-width: 1200px) {
+    &__peoples {
+      column-count: 3;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__peoples {
+      column-count: 2;
+    }
+  }
 }
