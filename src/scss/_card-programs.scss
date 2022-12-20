@@ -54,6 +54,15 @@
     padding-right: 35px;
     background-image: url("../img/programs/card-more-active.svg");
     }
+  }
 
+  @media (max-width: 1200px) {
+    &__content {
+      padding-bottom: 16px;
+    }
+
+    &__time {
+      margin-bottom: 13px;
+    }
   }
 }

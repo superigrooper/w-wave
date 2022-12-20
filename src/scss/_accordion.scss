@@ -140,8 +140,18 @@
   }
 
   @media (max-width: 1200px) {
+    &__item {
+      .accordion__btn {
+        padding-block: 22px;
+      }
+    }
     &__peoples {
+      padding-block: 26px;
       column-count: 3;
+    }
+
+    &__people {
+      margin-bottom: 7px;
     }
   }
 

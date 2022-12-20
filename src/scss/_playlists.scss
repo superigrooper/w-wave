@@ -61,6 +61,13 @@
     transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
 
+  &__text {
+    padding-top: 2px;
+    padding-left: 4px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &__title {
     margin-bottom: 12px;
   }
@@ -95,14 +102,19 @@
   &__artists {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 30px;
   }
 
   &__artist {
     min-height: 224px;
   }
 
+  &__link {
+    display: block;
+  }
+
   &__card {
+    width: 100%;
     height: 100%;
   }
 
@@ -125,40 +137,68 @@
   }
 
   @media (max-width: 1200px) {
+    & {
+      padding-top: 82px;
+      padding-bottom: 250px;
+    }
+
     &__container {
       flex-direction: column;
+      gap: 0;
     }
 
     &__info {
       width: auto;
     }
 
+    &__title {
+      margin-bottom: 0;
+    }
+
     &__list {
       display: block;
-      width: 500px;
+      width: 320px;
       column-count: 2;
     }
 
     &__item {
       width: max-content;
       &:not(:last-child) {
-        margin-bottom: 16px;
+        margin-bottom: 24px;
       }
     }
 
     &__pegi {
       position: absolute;
       left: 100px;
-      bottom: 0;
+      right: 100px;
+      bottom: 92px;
     }
 
     &__content {
       width: auto;
     }
 
-    &__artists {
-      display: block;
-      column-count: 3;
+    &__artist {
+      flex: 1 1 254px;
+      min-height: 112px;
+    }
+
+    &__card {
+      display: flex;
+    }
+
+    &__card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+      padding: 8px;
+      padding-top: 5px;
+    }
+
+    &__card-title {
+      margin-bottom: 4px;
     }
   }
 }
