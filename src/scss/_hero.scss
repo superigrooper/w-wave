@@ -80,12 +80,19 @@
 
   @media (max-width: 1200px) {
     &__container {
+      padding-top: 97px;
+      padding-bottom: 90px;
       background-image: url("../img/hero/1024/microphone.png");
       background-position: 669px 95px;
     }
+
+    &__descr {
+      margin-bottom: 21px;
+      max-width: 540px;
+    }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     &__container {
       background-image: none;
     }

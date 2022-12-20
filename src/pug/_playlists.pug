@@ -13,7 +13,7 @@ section.playlists#playlists
                 label.playlists__label(for= id)
                   input.playlists__input(type="radio", id= id, value= id, name="playlist")
                   span.playlists__custom-radio
-                  span.playlist__text= text
+                  span.playlists__text= text
       .playlists__pegi
         p.playlists__pegi-descr Раздел &laquo;Плейлисты&raquo; может содержать информацию, не&nbsp;предназначенную для несовершеннолетних
         div.playlists__pegi-date &copy&nbsp
@@ -27,7 +27,7 @@ section.playlists#playlists
             a.playlists__link(href="#")
               article.playlists__card
                 picture
-                    source(srcset= artist.pictureMobile, media="(max-width: 1110px)")
+                    source(srcset= artist.pictureMobile, media="(max-width: 1200px)")
                     source(srcset= artist.pictureDesktop, media="(max-width: 1920px)")
                     img(src= artist.pictureDesktop, alt= artist.title)
                 .playlists__card-content

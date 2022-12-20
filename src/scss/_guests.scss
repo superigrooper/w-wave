@@ -31,6 +31,25 @@
     width: 350px;
   }
 
+  @media (max-width: 1200px) {
+    & {
+      padding-top: 83px;
+      padding-bottom: 97px;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__descr {
+      width: 540px;
+    }
+
+    &__info {
+      width: 345px;
+    }
+  }
+
   @media (max-width: 1023px) {
     &__content {
       flex-direction: column;
