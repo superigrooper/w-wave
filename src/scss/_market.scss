@@ -1,0 +1,73 @@
+.market {
+  padding-top: 84px;
+  padding-bottom: 133px;
+  background-color: $market-bg;
+
+  &__container {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__pic {
+    width: 640px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 445px;
+    background-image: url("../img/market/market-bg.png");
+    background-repeat: no-repeat;
+    background-position-y: 110px;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+    font-size: 48px;
+    line-height: 48px;
+    color: $gold;
+  }
+
+  &__desc-content {
+    line-height: 29px;
+    color: $white;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__price {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 30px;
+    color: $white;
+  }
+
+  &__link {
+    padding-right: 50px;
+    padding-left: 70px;
+    width: max-content;
+    background-image: url("../img/market/icon-link-def.svg");
+    background-repeat: no-repeat;
+    background-position: 30px center;
+
+    &:hover {
+      background-image: url("../img/market/icon-link-hov.svg");
+    }
+
+    &:focus-visible {
+      background-color: $gold-dark;
+      background-image: url("../img/market/icon-link-def.svg");
+    }
+
+    &:active {
+      background-color: $gold-dark;
+      background-image: url("../img/market/icon-link-act.svg");
+    }
+  }
+}
