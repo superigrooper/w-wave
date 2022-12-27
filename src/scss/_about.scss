@@ -1,0 +1,191 @@
+.about {
+  background-color: $main-dark;
+
+  &__container {
+    padding-block: 94px;
+    background: url("../img/about/bg/Spiral.png") 705px 84px no-repeat,
+                url("../img/about/bg/Dawn.png") 907px 112px no-repeat,
+
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    max-width: 640px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $grey;
+  }
+
+  &__desc {
+    margin-bottom: 30px;
+    max-width: 640px;
+    font-size: 20px;
+    line-height: 32px;
+    color: $grey;
+  }
+
+  &__pic {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__card-title {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: $white;
+  }
+
+  &__card-desc {
+    color: $grey;
+  }
+
+  &__swiper-container {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    top: 130px;
+    width: 42px;
+    height: 42px;
+  }
+
+  &__btn-prev {
+    left: -65px;
+  }
+
+  &__btn-next {
+    right: -65px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 920px;
+  }
+
+  &__msg {
+    padding: 30px;
+    font-size: 20px;
+    line-height: 20px;
+    color: $white;
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 30px;
+    resize: none;
+    transition: border-color 0.3s ease-in-out, background 0.3s ease-in-out;
+    outline: none;
+
+    &::placeholder {
+      font-size: 20px;
+      color: $grey;
+    }
+
+    &:hover {
+      background-color: $form-hover-bg;
+    }
+
+    &:focus {
+      border-color: $primary-light;
+      background-color: $form-focus-bg;
+    }
+  }
+
+  &__lbl-wrap {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__lbl {
+    flex: 1 1 49%;
+  }
+
+  &__input {
+    padding: 25px 32px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
+    color: $white;
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 40px;
+    transition: border-color 0.3s ease-in-out, background 0.3s ease-in-out;
+    outline: none;
+
+    &::placeholder {
+      font-size: 20px;
+      color: $grey;
+    }
+
+    &:hover {
+      background-color: $form-hover-bg;
+    }
+
+    &:focus {
+      border-color: $primary-light;
+      background-color: $form-focus-bg;
+    }
+  }
+
+  &__send-btn {
+    align-self: flex-start;
+  }
+
+  &__lbl-data {
+    position: relative;
+    padding-left: 22px;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+
+  &__checkbox-img {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $white;
+    transition: border-color 0.3s ease-in-out;
+
+    svg {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    border: none;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+
+    &:checked + .about__checkbox-img svg {
+      opacity: 1;
+    }
+
+    &:focus-visible + .about__checkbox-img {
+      border-color: $primary;
+    }
+  }
+
+
+  &__checkbox-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    color: $white;
+  }
+}

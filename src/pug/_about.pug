@@ -1,0 +1,47 @@
+include data/_about.pug
+
+section.about
+  .container.about__container
+    h2.about__title.section-title.section-title--light О нас
+    h3.about__subtitle Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!
+    p.about__desc
+      | Друзья, мы&nbsp;будем очень рады, если вы&nbsp;поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы&nbsp;можете поделиться обратной связью о&nbsp;наших предеачах, темах, подборках и&nbsp;вообще обо всём! Это можно сделать либо написав нам в&nbsp;форме ниже, либо кликнув на&nbsp;наши соцсети в&nbsp;подвале сайта. Спасибо! Услышимся!:)
+    .about__swiper-container
+      .swiper.about__swiper
+        .swiper-wrapper
+          each slide in sliderCards
+            .swiper-slide
+              article.about__card
+                picture.about__pic
+                  source(srcset= slide.img320, media="(max-width: 567px)")
+                  source(srcset= slide.img768, media="(max-width: 767px)")
+                  source(srcset= slide.img1024, media="(max-width: 1023x)")
+                  source(srcset= slide.img1920, media="(max-width: 1920px)")
+                  img(src= slide.img1920, alt= slide.name)
+                h2.about__card-title= slide.name
+                p.about__card-desc= slide.desc
+      .swiper-button-prev.about__btn-prev.about__btn
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle r="20" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 24 24)" stroke="#A1A6B4" stroke-width="2"/>
+          <path d="M26 32L18 24L26 16" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+        </svg>
+      .swiper-button-next.about__btn-next.about__btn
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="20" transform="rotate(-90 24 24)" stroke="#A1A6B4" stroke-width="2"/>
+          <path d="M22 32L30 24L22 16" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+        </svg>
+    form.about__form(action="#")
+      textarea(name="about-msg", cols="30", rows="5" placeholder="Что скажете?").about__msg
+      .about__lbl-wrap
+        label(for="name").about__lbl
+          input(type="text" placeholder="Имя").about__input#name
+        label(for="email").about__lbl
+          input(type="email" placeholder="Email").about__input#email
+      button.btn.primary-btn.primary-btn--dark.about__send-btn Отправить
+      label(for="data").about__lbl-data
+        input(type="checkbox", name="data").about__checkbox#data
+        span.about__checkbox-img
+          <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.94976 1.08233L4.00002 6.03208L1.17159 3.20365" stroke="#AA9DFA" stroke-width="2"/>
+          </svg>
+        span.about__checkbox-text Согласен на обработку персональных данных
