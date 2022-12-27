@@ -1,0 +1,22 @@
+include data/_footer-data.pug
+include mixins/_category-item.pug
+
+footer.footer
+  .container.footer__container
+    //- footer__inner для дальнейшего адаптива и перестроения блоков
+    .footer__inner
+      .footer__links
+        a(href="#").footer__logo
+          img(src="./img/logo/logo-big--light.png", alt="Логотип компании")
+        ul.footer__links-list
+          each link in footerSocial
+            li.footer__item-social
+              a(href= link.url aria-label= link.ariaLabel target="_blank").footer__link-social
+                | !{link.img}
+      nav.footer__nav
+        ul.footer__list
+          each content, target in footerNav
+            li.footer__item
+              +link(content, target)(class='footer__link')
+    .footer__copy
+      span.footer__copy-text W-WAWE &reg; 2022
