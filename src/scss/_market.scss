@@ -1,15 +1,16 @@
 .market {
-  padding-top: 84px;
+  padding-top: 95px;
   padding-bottom: 133px;
   background-color: $market-bg;
 
   &__container {
     display: flex;
-    gap: 30px;
+    gap: 25px;
   }
 
   &__pic {
-    width: 640px;
+    padding-top: 7px;
+    max-width: 640px;
   }
 
   &__content {
@@ -18,7 +19,7 @@
     width: 445px;
     background-image: url("../img/market/market-bg.png");
     background-repeat: no-repeat;
-    background-position-y: 110px;
+    background-position-y: 113px;
   }
 
   &__title {

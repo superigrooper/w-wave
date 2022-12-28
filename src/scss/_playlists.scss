@@ -1,6 +1,7 @@
 .playlists {
   position: relative;
-  padding-block: 94px;
+  padding-top: 83px;
+  padding-bottom: 94px;
 
   &__container {
     display: flex;
@@ -18,7 +19,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
   }
 
   &__label {
@@ -69,7 +70,7 @@
   }
 
   &__title {
-    margin-bottom: 12px;
+    // margin-bottom: 12px;
   }
 
   &__subtitle {
@@ -96,6 +97,7 @@
   }
 
   &__content {
+    padding-top: 25px;
     width: 730px;
   }
 
@@ -268,7 +270,7 @@
   }
 
   &__card-content {
-    padding: 16px;
+    padding: 14px 16px 8px;
     border: 1px solid $grey-light;
     transition: border-color 0.3s ease-in-out;
   }
@@ -278,6 +280,7 @@
     font-size: 16px;
     line-height: 16px;
     color: $main-text;
+    text-align-last: left;
     transition: color 0.3s ease-in-out;
   }
 
@@ -285,6 +288,7 @@
     font-size: 12px;
     line-height: 12px;
     color: $grey;
+    text-align-last: left;
     transition: color 0.3s ease-in-out;
   }
 

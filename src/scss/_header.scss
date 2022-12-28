@@ -1,5 +1,6 @@
 .header {
 
+  // Бордеры на всю ширину экрана для обоих контейнеров
   &__top {
     border-bottom: 1px solid $grey-light;
   }
@@ -34,6 +35,7 @@
     outline: none;
     cursor: pointer;
 
+    // Всю конструкцию svg позже сделаю миксином
     svg {
       path {
         transition: stroke 0.3s ease-in-out;
@@ -68,7 +70,7 @@
 
   &__bottom-container {
     display: flex;
-    padding: 0 45px;
+    padding-inline: 45px;
   }
 
   &__bottom-wrap {
@@ -212,7 +214,7 @@
     &__bottom-container {
       display: flex;
       align-items: center;
-      padding-inline: 114px;
+      padding: 22px 114px;
     }
 
     &__bottom-wrap {
@@ -282,7 +284,6 @@
     }
   }
 }
-
 
 .page-nav {
   margin-right: 80px;

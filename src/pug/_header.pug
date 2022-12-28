@@ -1,7 +1,7 @@
-include data/_categories.pug
-include data/_nav-items.pug
+include data/_data-categories.pug
+include data/_data-nav-items.pug
 include mixins/_category-item.pug
-include data/_broadcast-header.pug
+include data/_data-broadcast-header.pug
 
 header.header
 
@@ -9,9 +9,8 @@ header.header
   .header__top
     .container.header__top-container
 
-      //- Обёртка для дальнейшего адаптива
+      //- Обёртка для дальнейшего адаптива при перестроении блоков
       .header__logo-wrap
-
         a.header__logo(href="#" aria-label="Логотип компании")
           picture
             source(srcset="./img/logo/logo-small.png" media="(max-width: 576px)")
@@ -19,8 +18,10 @@ header.header
             source(srcset="./img/logo/logo-big.png" media="(max-width: 1902px)")
             img(src="./img/logo/logo-big.png", alt="Логотип компании")
 
+      //- Основной контент
       .header__content-wrap
-        //- burger
+
+        //- burger (по-умоланию скрыт)
         button.header__burger.burger.btn(aria-label="Открыть меню")
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_24531_4514)">
@@ -37,59 +38,61 @@ header.header
         //- Верхнее меню
         nav.header__page-nav.page-nav
           ul.page-nav__list
-
-            //- Объект с категориями: там текст для ссылки и значение этой ссылки (адрес)
+            //- Объект с категориями: там текст для ссылки и значение этой ссылки (url)
             each content, target in categories
               li.page-nav__item
-
-                //- Миксин для ссылки
+                //- Миксин для ссылки из mixins/_data-category.pug
                 +link(content, target)(class='page-nav__link')
 
+        //- Кнопка открытия формы поиска
         button.header__search-btn(aria-label="Поиск по сайту")
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
 
+        //- Форма поиска (по-умолчанию скрыта)
         form.header__search-form(action="")
           label.header__search-lbl
             input.header__search-input(type="search")
         button.btn.btn--small-font.login-btn Вход
 
+  //- Нижний блок header
   .header__bottom
     .container.header__bottom-container
-
       //- Аналогичная обёртка
       .header__bottom-wrap
         nav.header__nav
           ul.header__nav-list
-
             //- Так же объект с данными для навигации
             each content, target in navItems
               li.header__nav-item
-
-                //-  Тот же миксин для ссылки
+                //- Тот же миксин для ссылки из mixins/_category-item.pug
                 +link(content, target)(class='header__nav-link')
 
         //- Блок с текущими данными из эфира
         .header__broadcasts.broadcasts
+          //- Данные берутся из соответствующего файла из data/_data-broadcast-header.pug
           each name in broadcastsHeader
             article.broadcasts__item
+              //- Кнопка play
               button.broadcasts__btn(aria-label="Начать воспроизведение")
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/>
                 </svg>
-
+              //- Содержимое
               .broadcasts__content
                 h2.broadcasts__title Сейчас в эфире
                 span.broadcasts__name= name
-
+      //- Pegi
       .header__pegi
         span.header__pegi-text(aria-label="Возрастное ограничение 12+") 12+
+      //- Кнопка для эфира (по-умолчанию скрыта)
       button.header__mobile-brd.btn(aria-label="Слушать эфир")
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/>
         </svg>
+      //- Кнопка для открытия эфира на мобиле (по-умолчанию скрыта)
       button.header__mobile-open.btn(aria-label="Узнать, что сейчас в эфире")
        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="7.5" cy="7.5" r="7.5" fill="#6D31EE" />

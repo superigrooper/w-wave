@@ -1,17 +1,17 @@
 .podcasts {
-  padding-top: 84px;
+  padding-top: 83px;
   padding-bottom: 94px;
   background-color: $grey-light;
 
   &__title {
-    margin-bottom: 14px;
+    margin-bottom: 17px;
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    margin-bottom: 64px;
+    margin-bottom: 60px;
   }
 
   &__item {

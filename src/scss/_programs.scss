@@ -8,6 +8,10 @@
     gap: 30px;
   }
 
+  &__subtitle {
+    margin-bottom: 8px;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -16,7 +20,7 @@
 
   &__archive {
     margin-top: auto;
-    padding-top: 120px;
+    padding-top: 113px;
     background-image: url("../img/programs/archive/mic.png");
     background-repeat: no-repeat;
   }
@@ -24,16 +28,11 @@
   &__link {
     display: inline-block;
     margin-bottom: 12px;
-    padding: 11px 45px 11px 65px;
+    padding: 8px 56px;
     border-radius: 77px;
     outline: 2px solid $main-dark;
     outline-offset: -2px;
     color: $main-text;
-    background-image: url("../img/programs/archive/archive.svg");
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: 40px;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:hover {
       background-image: url("../img/programs/archive/archive-white.svg");
@@ -46,7 +45,7 @@
   }
 
   &__content {
-    padding-top: 24px;
+    padding-top: 25px;
     flex:2 2 content;
   }
 
@@ -125,6 +124,9 @@
   }
 
   &__inner {
+    padding: 2.5px 7.5px 3.75px;
+    min-height: 39px;
+    font-size: 16px;
     border: none;
     background-color: transparent;
   }
@@ -223,4 +225,8 @@
 
 .choices__list--dropdown .choices__item--selectable {
   padding-right: 10px;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 0;
 }

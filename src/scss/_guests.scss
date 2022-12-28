@@ -1,17 +1,14 @@
 .guests {
-  padding-block: 80px;
+  padding-top: 83px;
+  padding-bottom: 89px;
   background-color: $main-dark;
-
-  &__title {
-    margin-bottom: 12px;
-  }
 
   &__subtitle {
     margin-bottom: 8px;
   }
 
   &__descr {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
     width: 825px;
     font-size: 20px;
     line-height: 32px;
@@ -28,6 +25,7 @@
   }
 
   &__info {
+    // padding-top: 5px;
     width: 350px;
   }
 
