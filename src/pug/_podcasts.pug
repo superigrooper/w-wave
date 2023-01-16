@@ -11,7 +11,10 @@ section.podcasts#podcasts
 
           article.card-podcast
             .card-podcast__img-wrap
-              img.card-podcast__img(src= podcastsData[i].img, alt= `img ${podcastsData[i].title}`)
+              picture
+                source(srcset= podcastsData[i].imgMobile, media="(max-width: 767px)")
+                source(srcset= podcastsData[i].imgDesktop, media="(max-width: 1920px)")
+                img(src= podcastsData[i].imgDesktop, alt= podcastsData[i].title)
               span.card-podcast__date= podcastsData[i].date
 
             .card-podcast__data

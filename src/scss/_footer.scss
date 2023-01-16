@@ -85,4 +85,18 @@
     text-align: center;
     color: $grey;
   }
+
+  @media (max-width: 1023px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__links {
+      text-align: center;
+    }
+
+    &__links-list {
+      justify-content: center;
+    }
+  }
 }

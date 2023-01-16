@@ -97,4 +97,20 @@
       background-image: none;
     }
   }
+
+  @media (max-width: 767px) {
+    &__title {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    &__descr {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &__btn {
+      font-size: 16px;
+    }
+  }
 }

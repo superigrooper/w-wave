@@ -367,4 +367,19 @@
       margin-bottom: 4px;
     }
   }
+
+  @media (max-width: 767px) {
+
+    &__form {
+      overflow-x: auto;
+      column-count: auto;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      // min-width: 100%;
+
+    }
+  }
 }

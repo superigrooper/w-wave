@@ -59,4 +59,13 @@
       flex-direction: column;
     }
   }
+
+  @media (max-width: 767px) {
+    &__list {
+      flex-direction: initial;
+    }
+    &__item:nth-last-child(-n+8) {
+      display: none;
+    }
+  }
 }

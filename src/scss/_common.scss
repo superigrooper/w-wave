@@ -12,12 +12,21 @@ body {
   @media (max-width: 1200px) {
     padding-inline: 100px;
   }
+
+  @media (max-width: 767px) {
+    padding-inline: 32px;
+  }
 }
 
 .section-title {
   font-size: 48px;
   font-weight: 400;
   color: $main-text;
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .section-title--light {
@@ -36,3 +45,7 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
+
+// * {
+//   outline: 1px solid salmon;
+// }

@@ -254,6 +254,11 @@
   }
 
   @media (max-width: 576px) {
+
+    &__top-container {
+      padding: 0;
+    }
+
     &__logo-wrap {
       padding-left: 32px;
     }
